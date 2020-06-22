@@ -24,7 +24,7 @@ it("No candidates, CandidateList should display No Candidates when there aren't 
   expect(await findByText("No candidates")).toBeInTheDocument();
 });
 
-it("One candidate named George, CandidateList should display No Candidates when there aren't any", async () => {
+it("One candidate named George, CandidateList should have George", async () => {
   setupStoreWithCandidates([{ id: 1, name: "George" }]);
   const { findByText } = render(<CandidateList />);
 
